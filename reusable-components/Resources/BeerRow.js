@@ -34,7 +34,7 @@ var BeerRow = function(beer) {
 	row.add(beerName);
 	
 	// setters & getters
-	var pushBeer = function(_beer){
+	row.pushBeer = function(_beer){
 		// save the variable
 		beer = _beer;
 		
@@ -43,7 +43,7 @@ var BeerRow = function(beer) {
 		beerName.text = beer.name;
 	}
 	
-	var pullBeer = function() {
+	row.pullBeer = function() {
 		// return the variable
 		return beer;
 	}
