@@ -10,7 +10,6 @@ var BeerRow = function(beer) {
 	var row = Titanium.UI.createTableViewRow({
 		className:'beerRow',
 		height:70,
-		data:beer
 	});
 
 	var beerImage = Titanium.UI.createImageView({
@@ -29,7 +28,7 @@ var BeerRow = function(beer) {
 		left:75,
 		right:30,
 		height:Ti.UI.SIZE,
-		text:beer.name
+		text:beer.name,
 	});
 	row.add(beerName);
 	

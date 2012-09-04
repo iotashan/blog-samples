@@ -11,7 +11,7 @@ var BeerRow = require('BeerRow');
 //
 var win = Titanium.UI.createWindow({  
     title:'My Table',
-    backgroundColor:'#fff'
+    backgroundColor:'#fff',
 });
 
 //
