@@ -61,11 +61,11 @@ var tableRows = [];
 for (var i in beers) {
 	var newRow = new BeerRow(beers[i]);
 	
-	newRow.addEventListener('click',function(e){
+	newRow.view.addEventListener('click',function(e){
 		alert('You clicked on '+e.row.pullBeer().name);
 	});
 	
-	tableRows.push(newRow);
+	tableRows.push(newRow.view);
 }
 
 //

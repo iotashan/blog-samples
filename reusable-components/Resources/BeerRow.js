@@ -6,8 +6,11 @@
 var retina = Ti.Platform.displayCaps.density == 'high';
 
 var BeerRow = function(beer) {
+	// create an empy object
+	var row = {};
+		
 	// create the Row UI
-	var row = Titanium.UI.createTableViewRow({
+	row.view = Titanium.UI.createTableViewRow({
 		className:'beerRow',
 		height:70,
 	});
@@ -20,7 +23,7 @@ var BeerRow = function(beer) {
 		image:retina ? beer.image2x : beer.image,
 		hires:retina,
 	});
-	row.add(beerImage);
+	row.view.add(beerImage);
 	
 	var beerName = Titanium.UI.createLabel({
 		color:'#C36466',
@@ -30,7 +33,7 @@ var BeerRow = function(beer) {
 		height:Ti.UI.SIZE,
 		text:beer.name,
 	});
-	row.add(beerName);
+	row.view.add(beerName);
 	
 	// setters & getters
 	row.pushBeer = function(_beer){
